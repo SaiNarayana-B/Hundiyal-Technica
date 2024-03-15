@@ -1,0 +1,55 @@
+/* Custom CSS for User Dashboard */
+
+/* Overall container style */
+.container {
+    margin-top: 50px;
+}
+
+/* Heading style */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Loan History section style */
+#loanHistory {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #66a7e9;
+}
+
+#loanHistory p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* New Loan Request Form style */
+#newLoanRequest {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #5d9bda ;
+}
+
+/* Form field style */
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+}
+
+/* Submit button style */
+.btn-primary {
+    margin-top: 20px;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+  , #0073e6);
+  background-image: linear-gradient(#0d6efd,rgb(175, 56, 56));
+  }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="customers.css">
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Loan History Section -->
+<section id="loanHistory" class="container">
+    <h2>Loan History</h2>
+    <!-- Loan history table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Loan Number</th>
+                <th scope="col">Lender Name</th>
+                <th scope="col">Loan Amount</th>
+                <th scope="col">EMI</th>
+                <th scope="col">Balance</th>
+                <th scope="col">Due Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample loan history data -->
+            <tr>
+                <td>123</td>
+                <td>Ranjani</td>
+                <td>Rs 5000</td>
+                <td>Rs 500</td>
+                <td>Rs 2000</td>
+                <td>2024-06-15</td>
+            </tr>
+            <tr>
+                <td>456</td>
+                <td>Rakesh</td>
+                <td>Rs 8000</td>
+                <td>Rs 600</td>
+                <td>Rs 3000</td>
+                <td>2024-07-20</td>
+            </tr>
+            <!-- Add more rows for additional loan histories -->
+        </tbody>
+    </table>
+</section>
+
+    <!-- New Loan Request Form -->
+<section id="newLoanRequest" class="container">
+    <h2>New Loan Request</h2>
+    <!-- Add new loan request form elements here -->
+    <form id="loanRequestForm">
+        <!-- Basic details -->
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="mb-3">
+            <label for="aadhar" class="form-label">Aadhar Number</label>
+            <input type="text" class="form-control" id="aadhar" placeholder="Enter your Aadhar number" required>
+        </div>
+        <!-- Loan details -->
+        <div class="mb-3">
+            <label for="loanAmount" class="form-label">Loan Amount</label>
+            <input type="text" class="form-control" id="loanAmount" placeholder="Enter loan amount" required>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Permanent Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your Permanent address" required>
+        </div>
+        <!-- Add more form fields as needed -->
+        <button type="submit" class="btn btn-primary">Submit Request</button>
+    </form>
+</section>
+
+    <!-- Popup Message Modal -->
+    <div class="modal fade" id="popupMessageModal" tabindex="-1" aria-labelledby="popupMessageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popupMessageModalLabel">Request Sent</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Request sent, waiting for approval.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript code -->
+    <script>
+        document.getElementById('loanRequestForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Perform form validation if needed
+            // Show the popup message modal
+            var popupMessageModal = new bootstrap.Modal(document.getElementById('popupMessageModal'));
+            popupMessageModal.show();
+            // Clear the form
+            document.getElementById('loanRequestForm').reset();
+            // Redirect to another page
+            window.location.href = 'customer.html';
+        });
+    </script>
+</body>
+</html>
