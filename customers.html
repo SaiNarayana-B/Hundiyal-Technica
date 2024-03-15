@@ -107,13 +107,9 @@
     <script>
         document.getElementById('loanRequestForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            // Perform form validation if needed
-            // Show the popup message modal
             var popupMessageModal = new bootstrap.Modal(document.getElementById('popupMessageModal'));
             popupMessageModal.show();
-            // Clear the form
             document.getElementById('loanRequestForm').reset();
-            // Redirect to another page
             window.location.href = 'customer.html';
         });
     </script>
